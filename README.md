@@ -1,16 +1,14 @@
-#python navig.py
+# Q-Learning based implementation for optimum path exploration
 
-##Algorithm implemented: Q-Learning
-
-##Usage
+## Usage
 ```
 pip3 install -r requirements.txt
 python3 navig.py
 ```
 
-##Description:
+## Description:
 
-The code is in 3 sections:
+The code is developed in 3 parts:
 
 1. Environment
 2. Navigation
