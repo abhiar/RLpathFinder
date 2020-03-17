@@ -1,12 +1,16 @@
 #python navig.py
 
-Algorithm implemented: Q-Learning
+##Algorithm implemented: Q-Learning
 
+##Usage
+```
+pip3 install -r requirements.txt
+python3 navig.py
+```
 
+##Description:
 
-Summary:
-
-The code is divided into 3 sections:
+The code is in 3 sections:
 
 1. Environment
 2. Navigation
@@ -18,15 +22,11 @@ Navigation: This is the main section of the code where the map traversal and rei
 
 GUI: The GUI implementation of the road map using Tkinter. The GUI is also animated manually to show the learning process.
 
-
-
-
 Input: The Source, Destination and the 'To Avoid' nodes/junctions.
 	(Optional) Input the traffic values.
 
 Output: The optimal path, given the input conditions.
 
-
-Note: The map is immutable in this version.
+Note: The map is immutable.
 
 

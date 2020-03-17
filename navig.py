@@ -65,13 +65,13 @@ node_reward = { 'A': 0,
 
 def inputNodeDetails():
     global s,d,o
-    s = raw_input("Enter Source (A-K):\n")
-    d = raw_input("Enter Destination (A-K):\n")
-    o = raw_input("Enter Node to be avoided (A-K):\n")
+    s = input("Enter Source (A-K):\n")
+    d = input("Enter Destination (A-K):\n")
+    o = input("Enter Node to be avoided (A-K):\n")
 
 def inputTrafficCosts():
     for x in traffic_costs:
-        traffic_costs[x] = raw_input("Enter traffic value for node " + str(x) + " (0 - 0.16)\n")
+        traffic_costs[x] = input("Enter traffic value for node " + str(x) + " (0 - 0.16)\n")
         path_costs[x] += float(traffic_costs[x])
 
 
@@ -82,7 +82,7 @@ def travel_reward(junctions):
 
 def setup_env():
     inputNodeDetails()
-    ch = raw_input("Wish to add your own traffic values? (y/n)\n")
+    ch = input("Wish to add your own traffic values? (y/n)\n")
     if ch == 'y' or ch == 'Y':
         inputTrafficCosts()
 
@@ -141,7 +141,7 @@ def navig():
 GUI
 '''
 
-from Tkinter import *
+from tkinter import *
 from time import sleep
 
 coords = {  'I' : [50,50],
@@ -185,7 +185,7 @@ def animate():
             print("Agent is finding the solution...\n")
         else:
             print("Optimal solution found!\n")
-            print solution[i]
+            print(solution[i])
             for j in range(len(solution[i])-1):
                 can.create_line(coords[solution[i][j]][0],coords[solution[i][j]][1],coords[solution[i][j+1]][0],coords[solution[i][j+1]][1], width = 5, fill = "green")
             break
